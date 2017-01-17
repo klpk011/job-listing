@@ -6,7 +6,9 @@ resources :jobs do
   end
 
 
-   root 'jobs#index'
+   root 'welcome#index'
+  ## root 'jobs#index'
+
 namespace :admin do
     resources :jobs do
        member do

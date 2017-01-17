@@ -17,4 +17,35 @@
 
  */
  @import "bootstrap-sprockets";
- @import "bootstrap"
+ @import "bootstrap";
+
+ .navbar-default {
+    background-color: #E0E0E0;//背景颜色
+    border-color: #E0E0E0;//边框色
+    margin-bottom: 0;//底部 margin 不撑开距离
+}
+
+ .navbar-default .navbar-brand {
+    color: #EF6C00;//字体颜色
+    padding: 10px 15px;//上下10px,左右15px
+    line-height: 30px;//文字行高
+ }
+
+ @media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+   color: #FF6F00;//鼠标放置在链接上的文字颜色
+   background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
+ }
+
+
+ .container-fluid .jumbotron{
+  padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  border-radius: 0;//圆角为0
+}

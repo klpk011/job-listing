@@ -1,9 +1,19 @@
+<form class="form-inline">
+   <div class="input-group">
+     <input type="email" class="form-control" size="50" placeholder="输入职位" required>
+     <div class="input-group-btn">
+       <button type="button" class="btn btn-danger">搜工作</button>
+     </div>
+   </div>
+ </form>
+
+
 <div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
+  <%= link_to("Add a job", new_job_path, :class => "btn btn-primary" ) %>
 </div>
 
-<div class="dropdown clearfix pull-right">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<div class="dropdown clearfix pull-left">
+    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       排序
         <span class="caret"></span>
     </button>
@@ -16,7 +26,7 @@
 
         </li>
         <li>
-          <%= link_to("按照发表时间排序", jobs_path ) %>
+          <%= link_to("按照发布时间排序", jobs_path ) %>
 
         </li>
     </ul>
