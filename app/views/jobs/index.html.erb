@@ -1,12 +1,14 @@
-<form class="form-inline">
-   <div class="input-group">
-     <input type="job" class="form-control" size="50" placeholder="输入职位" required>
-     <div class="input-group-btn">
-       <button type="button" class="btn btn-danger">搜工作</button>
-     </div>
-   </div>
- </form>
- <br>
+
+<%= form_tag jobs_path, :method => "get" do %>
+
+       <div class="searchform">
+          <%= text_field_tag :search, params[:search], placeholder: "输入需要搜索的职位", class: "searchbox"%>
+          <span>
+              <%= submit_tag "搜索", :title => nil, :description => nil, class: "sophie" %>
+              <!-- <input type="submit" value="点 击" class="mike"> -->
+           </span>
+       </div>
+    <% end %>
 
 
 <div class="pull-right">
@@ -33,14 +35,14 @@
     </ul>
 </div>
 
-<table class="table table-boldered">
+<table class="table table-bordered ">
   <thead>
         <tr>
             <td>
                 职位</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
-            <td>刊登时间</td>
+            <td align=center>薪资下限</td>
+            <td align=center>薪资上限</td>
+            <td align=center>刊登时间</td>
         </tr>
 
     </thead>
@@ -50,14 +52,14 @@
     <td>
       <%= link_to(job.title, job_path(job)) %>
     </td>
-    <td>
+    <td align=center>
        <%= job.wage_lower_bound %>
      </td>
-    <td>
+    <td align=center>
         <%= job.wage_upper_bound %>
       </td>
 
-    <td>
+    <td align=center>
       <%= job.created_at %>
     </td>
   </tr>
