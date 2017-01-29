@@ -60,10 +60,14 @@
       </td>
 
     <td align=center>
-      <%= job.created_at %>
+       <%= job.created_at.to_date %>
     </td>
   </tr>
   <% end %>
 </tbody>
 
 </table>
+
+<div class="text-center">
+    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+</div>
